@@ -1,0 +1,190 @@
+<!-- ================= DONATION SECTION ================= -->
+<section id="donate" class="donate-section">
+
+  <div class="container">
+
+    <!-- SECTION HEADER -->
+    <div class="section-title">
+      <h2>Support Our Mission</h2>
+      <p>Empower girls and young women today. Choose a method below to donate safely and easily.</p>
+    </div>
+
+    <!-- DONATION CARDS GRID -->
+    <div class="donate-grid">
+
+      <!-- MPESA CARD -->
+      <div class="donate-card">
+        <i class="fa-solid fa-mobile-screen-button icon"></i>
+        <h3>Donate via MPESA</h3>
+        <div class="box">
+          <span>Paybill Number:</span>
+          <b>123456</b>
+        </div>
+        <div class="box">
+          <span>Account Name:</span>
+          <b>BintiCare</b>
+        </div>
+        <p class="note">
+          To donate via MPESA: Go to Lipa na MPESA → Paybill → Enter 123456 → Account: BintiCare → Enter Amount → Confirm.
+        </p>
+      </div>
+
+      <!-- BANK CARD -->
+      <div class="donate-card">
+        <i class="fa-solid fa-building-columns icon"></i>
+        <h3>Donate via Bank</h3>
+        <div class="box">
+          <span>Bank Name:</span>
+          <b>Equity Bank</b>
+        </div>
+        <div class="box">
+          <span>Account Number:</span>
+          <b>00123456789</b>
+        </div>
+        <div class="box">
+          <span>Account Name:</span>
+          <b>BintiCare Foundation</b>
+        </div>
+        <p class="note">
+          You can make a direct bank deposit. After deposit, please send your transaction slip via email: info@binticare.org
+        </p>
+      </div>
+
+      <!-- PAYPAL CARD -->
+      <div class="donate-card">
+        <i class="fa-brands fa-paypal icon"></i>
+        <h3>Donate via PayPal</h3>
+        <div class="box">
+          <span>PayPal Email:</span>
+          <b>donate@binticare.org</b>
+        </div>
+        <p class="note">
+          Click the button below to donate securely using PayPal. You can choose any amount.
+        </p>
+        <a href="https://www.paypal.com/donate?hosted_button_id=XXXX" class="paypal-btn">Donate with PayPal</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= DONATION SECTION ================= */
+.donate-section{
+  padding:120px 0;
+  background:#fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  color:#d63384;
+  font-size:42px;
+  font-weight:900;
+}
+
+.section-title p{
+  color:#555;
+  font-size:16px;
+  line-height:1.8;
+}
+
+/* GRID */
+.donate-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+/* CARD */
+.donate-card{
+  background:#fff;
+  padding:35px 25px;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.06);
+  transition:0.3s ease;
+}
+
+.donate-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.icon{
+  font-size:36px;
+  color:#ff69b4;
+  margin-bottom:15px;
+}
+
+.donate-card h3{
+  font-size:24px;
+  font-weight:800;
+  color:#d63384;
+  margin-bottom:15px;
+}
+
+.box{
+  background:#fff0f5;
+  padding:12px 14px;
+  border-left:4px solid #ff69b4;
+  margin:12px 0;
+  border-radius:10px;
+}
+
+.box span{
+  display:block;
+  font-size:12px;
+  color:#777;
+}
+
+.box b{
+  color:#222;
+}
+
+.note{
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
+  margin-top:10px;
+  background:#fdf2f8;
+  padding:10px;
+  border-radius:12px;
+}
+
+.paypal-btn{
+  display:inline-block;
+  margin-top:15px;
+  background:#0070ba;
+  color:white;
+  padding:12px 22px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.paypal-btn:hover{
+  background:#005c99;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:992px){
+  .donate-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:768px){
+  .donate-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2{
+    font-size:32px;
+  }
+}
+</style>

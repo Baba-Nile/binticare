@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BintiCare Foundation | Empowering Girls</title>
+
+<!-- FONTS -->
+<style>
+body { font-family: Calibri, Arial, sans-serif; }
+</style>
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ================= ROOT ================= */
+:root{
+  --primary:#ff69b4;
+  --secondary:#d63384;
+  --light:#fff0f5;
+  --dark:#222;
+}
+
+/* ================= GLOBAL ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fff;
+  color:var(--dark);
+  line-height:1.6;
+}
+
+/* ================= CONTAINER ================= */
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
+  padding:15px 0;
+  z-index:1000;
+}
+
+.navbar-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+}
+
+.logo span{
+  font-weight:bold;
+  color:var(--secondary);
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#444;
+}
+
+.btn-donate{
+  background:var(--primary);
+  color:white;
+  padding:8px 18px;
+  border-radius:25px;
+}
+
+/* ================= HERO ================= */
+.hero{
+  height:100vh;
+  background:url("image 1.jpg") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  max-width:800px;
+}
+
+.hero h1{
+  font-size:3.5rem;
+}
+
+.hero p{
+  margin:20px 0;
+}
+
+.hero a{
+  padding:12px 25px;
+  border-radius:30px;
+  margin:5px;
+  text-decoration:none;
+}
+
+.btn-primary{
+  background:var(--primary);
+  color:white;
+}
+
+.btn-outline{
+  border:2px solid white;
+  color:white;
+}
+
+/* ================= SECTIONS ================= */
+section{
+  padding:100px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  color:var(--secondary);
+}
+
+/* ================= ABOUT ================= */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.about img{
+  width:100%;
+  border-radius:15px;
+}
+
+.about-box{
+  margin-bottom:20px;
+}
+
+/* ================= PROGRAMS ================= */
+.programs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.card i{
+  font-size:30px;
+  color:var(--primary);
+}
+
+/* ================= IMPACT ================= */
+.impact{
+  background:var(--light);
+}
+
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  text-align:center;
+}
+
+.impact h3{
+  color:var(--primary);
+  font-size:2.5rem;
+}
+
+/* ================= TEAM ================= */
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.team-card{
+  text-align:center;
+}
+
+.team-card img{
+  width:100%;
+  border-radius:15px;
+}
+
+/* ================= CTA ================= */
+.cta{
+  background:var(--primary);
+  color:white;
+  text-align:center;
+  padding:60px;
+}
+
+/* ================= CONTACT ================= */
+form{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input, textarea{
+  padding:12px;
+  border:1px solid #ddd;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .impact-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-wrapper">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="binti logo.jpg" alt="BintiCare">
+      <span>BintiCare</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <div class="nav-menu" id="navMenu">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#programs" class="nav-link">Programs</a>
+      <a href="#impact" class="nav-link">Impact</a>
+      <a href="#contact" class="nav-link">Contact</a>
+
+      <!-- Mobile Donate -->
+      <a href="#" class="btn-donate mobile">Donate</a>
+    </div>
+
+     
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 22px 0;
+  background: rgba(255, 240, 245, 0.85);
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+/* SCROLL EFFECT */
+.navbar.scrolled {
+  padding: 12px 0;
+  background: #ffffff;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= LAYOUT ================= */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-weight: 700;
+  color: #d63384;
+  font-size: 18px;
+}
+
+/* ================= NAV LINKS ================= */
+.nav-menu {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+
+/* ACTIVE + HOVER LINE */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ff69b4;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #d63384;
+}
+
+/* ================= RIGHT ================= */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* DONATE BUTTON */
+.btn-donate {
+  background: linear-gradient(135deg, #ff69b4, #ff85c1);
+  color: white;
+  padding: 9px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* SUBTLE PULSE */
+.btn-donate.desktop {
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,105,180,0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(255,105,180,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,105,180,0); }
+}
+
+.btn-donate:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= HAMBURGER ================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background: #d63384;
+  transition: 0.3s;
+}
+
+/* ANIMATION */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: 0.4s;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .btn-donate.desktop {
+    display: none;
+  }
+
+  .btn-donate.mobile {
+    display: inline-block;
+  }
+}
+</style>
+<script>
+// TOGGLE MENU
+const toggle = document.getElementById("menuToggle");
+const menu = document.getElementById("navMenu");
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+  menu.classList.toggle("active");
+});
+
+// SCROLL EFFECT
+window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+// ACTIVE LINK SWITCH
+const links = document.querySelectorAll(".nav-link");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+</script>
+
+<!-- ================= ELITE HERO (CLEAN VERSION) ================= -->
+<section class="hero">
+
+  <!-- BACKGROUND -->
+  <div class="hero-bg"></div>
+
+  <!-- OVERLAY -->
+  <div class="hero-overlay"></div>
+
+  <!-- CONTENT -->
+  <div class="hero-content">
+
+    <span class="hero-tag">BintiCare Foundation</span>
+
+    <h1>
+      Empowering A Girl<br>
+      Across Kenya
+    </h1>
+
+    <p>
+      We are creating a future where all women and girls have tools and the power to reach their full potential and the opportunity to thrive.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary">Join Our Mission</a>
+      <a href="#" class="btn-outline">Donate Now</a>
+    </div>
+
+  </div>
+
+</section>
+<style>
+  /* ================= HERO CLEAN PREMIUM ================= */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+/* ================= BACKGROUND ================= */
+.hero-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("image 1.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  filter: brightness(0.55) contrast(1.1) saturate(1.1);
+}
+
+/* soft elegant overlay (cleaned) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.65) 0%,
+    rgba(0,0,0,0.35) 60%,
+    rgba(0,0,0,0.2) 100%
+  );
+  z-index: 0;
+}
+
+/* subtle pink accent glow (matches your brand) */
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -150px;
+  top: 20%;
+  width: 400px;
+  height: 400px;
+  background: #ff2d7a;
+  opacity: 0.08;
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* ================= CONTENT ================= */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  text-align: left;
+}
+
+/* tag */
+.hero-tag {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff2d7a;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* title */
+.hero h1 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* paragraph */
+.hero p {
+  font-size: 17px;
+  margin-top: 18px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  max-width: 600px;
+}
+
+/* ================= BUTTONS ================= */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* primary */
+.btn-primary {
+  background: linear-gradient(135deg, #ff2d7a, #ff4fa3);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255,45,122,0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+/* outline */
+.btn-outline {
+  border: 2px solid rgba(255,255,255,0.7);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 0 6%;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+
+<!-- ================= ABOUT SECTION (PREMIUM FINAL) ================= -->
+<section id="about" class="about">
+
+  <div class="about-wrapper">
+
+    <!-- IMAGE SIDE -->
+    <div class="about-media">
+
+      <div class="image-frame">
+        <img src="image 2.jpg" alt="About BintiCare">
+      </div>
+
+      <div class="accent-glow"></div>
+
+    </div>
+
+    <!-- CONTENT SIDE -->
+    <div class="about-content">
+
+      <span class="about-tag">Who We Are</span>
+
+      <h2>
+        Creating Dignity,<br>
+        Purpose & Belonging
+      </h2>
+
+      <p class="about-intro">
+        <strong>BintiCare Foundation</strong> is a non-profit organization dedicated to empowering girls and young women.
+        We believe every girl deserves dignity, education, and the chance to reach her full potential.
+      </p>
+
+      <!-- STORY BLOCKS -->
+      <div class="about-stories">
+
+        <div class="story-card">
+          <span class="dot"></span>
+          <div>
+            <h3>Our Purpose</h3>
+            <p>To restore dignity and confidence among girls through sustainable community support programs.</p>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <span class="dot"></span>
+          <div>
+            <h3>Our Mission</h3>
+            <p>To empower young women & girls with tools for social and economic transformation in their lives and communities.</p>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <span class="dot"></span>
+          <div>
+            <h3>Our Vision</h3>
+            <p>A world where girls have equal opportunity, dignity, and the power to fully realize their potential.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA BUTTON (NO BORDER, CLEAN TEXT STYLE) -->
+      <a href="about.html" class="read-more-btn">Read More →</a>
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+  /* ================= ABOUT (PREMIUM CLEAN VERSION) ================= */
+
+.about {
+  padding: 90px 4%;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LAYOUT */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ================= IMAGE ================= */
+.about-media {
+  position: relative;
+}
+
+.image-frame {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.12);
+  position: relative;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.image-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* GLOW */
+.accent-glow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  bottom: -60px;
+  right: -60px;
+  background: radial-gradient(circle, rgba(255,45,122,0.22), transparent 70%);
+  filter: blur(30px);
+  z-index: -1;
+}
+
+/* ================= CONTENT ================= */
+.about-tag {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff2d7a;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.about-content h2 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 18px;
+}
+
+.about-intro {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* ================= STORY CARDS ================= */
+.about-stories {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.story-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff2d7a;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.story-card h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: #111;
+}
+
+.story-card p {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ================= READ MORE BUTTON (CLEAN TEXT STYLE) ================= */
+.read-more-btn {
+  display: inline-block;
+  margin-top: 35px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff2d7a;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* underline animation */
+.read-more-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff2d7a;
+  transition: width 0.3s ease;
+}
+
+.read-more-btn:hover::after {
+  width: 100%;
+}
+
+.read-more-btn:hover {
+  transform: translateX(4px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-content h2 {
+    font-size: 34px;
+  }
+
+  .image-frame img {
+    height: 360px;
+  }
+}
+</style>
+
+<!-- ================= PROGRAMS SECTION ================= -->
+<section id="programs" class="programs">
+
+  <div class="programs-header">
+
+    <span class="section-tag">What We Do</span>
+
+    <h2>
+      Our Programs<br>
+      for Empowerment
+    </h2>
+
+    <p>
+      We run impactful programs designed to empower girls and young women through education,
+      health, mentorship, and life skills development.
+    </p>
+
+  </div>
+
+  <div class="programs-grid">
+
+    <!-- CARD 1 -->
+    <div class="program-card">
+      <img src="image 3.jpg" alt="">
+      <div class="program-content">
+        <h3>Support Girls Education</h3>
+        <p>We ensure girls have access to quality education by reducing barriers and providing learning support.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="program-card">
+      <img src="training 1.jpg" alt="">
+      <div class="program-content">
+        <h3>Professional Trainings</h3>
+        <p>We equip girls with practical skills and vocational training for financial independence.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="program-card">
+      <img src="image 1.jpg" alt="">
+      <div class="program-content">
+        <h3>Healthy Lifestyle</h3>
+        <p>We promote physical, mental, and emotional well-being for sustainable development.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="program-card">
+      <img src="health 1.jpg" alt="">
+      <div class="program-content">
+        <h3>Nutrition & Diet</h3>
+        <p>We educate girls on proper nutrition and healthy eating habits for better growth.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="program-card">
+      <img src="mentorship 1.jpg" alt="">
+      <div class="program-content">
+        <h3>Mentorship & Guidance</h3>
+        <p>We provide counseling and mentorship to help girls build confidence and direction in life.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<style>
+  
+/* ================= PROGRAMS (PREMIUM CLEAN VERSION) ================= */
+
+.programs {
+  padding: 110px 8%;
+  background: linear-gradient(180deg, #fff 70%, #fff3f8 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft brand glow */
+.programs::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: -120px;
+  width: 300px;
+  height: 300px;
+  background: #ff2d7a;
+  opacity: 0.06;
+  filter: blur(70px);
+  border-radius: 50%;
+}
+
+/* ================= HEADER ================= */
+.programs-header {
+  max-width: 750px;
+  margin-bottom: 60px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff2d7a;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.programs-header h2 {
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.programs-header p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ================= GRID ================= */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ================= CARD ================= */
+.program-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.07);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.program-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.program-card:hover img {
+  transform: scale(1.06);
+}
+
+/* CONTENT */
+.program-content {
+  padding: 22px;
+  text-align: left;
+}
+
+.program-content h3 {
+  font-size: 19px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.program-content p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* ================= READ MORE ================= */
+.program-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: #ff2d7a;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.program-content a:hover {
+  gap: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1000px) {
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .programs-header h2 {
+    font-size: 34px;
+  }
+}
+</style>
+<!-- ================= IMPACT SECTION ================= -->
+<section class="impact parallax-impact" id="impactSection">
+
+  <!-- Sticky mini counter -->
+  <div class="impact-sticky" id="impactSticky">
+    <div>
+      <span id="sGirls">0</span>
+      <small>Girls</small>
+    </div>
+    <div>
+      <span id="sComm">0</span>
+      <small>Communities</small>
+    </div>
+    <div>
+      <span id="sVol">0</span>
+      <small>Volunteers</small>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="impact-header">
+    <span class="section-tag">Our Impact</span>
+
+    <h2>
+      Creating measurable<br>
+      change in communities
+    </h2>
+
+    <p>
+      Through our programs, we continue to reach and transform lives,
+      creating lasting impact for girls and young women.
+    </p>
+  </div>
+
+  <!-- CARDS -->
+  <div class="impact-grid">
+
+    <div class="impact-card">
+      <h3 class="counter" data-target="15000">0</h3>
+      <p>Girls Empowered</p>
+      <div class="progress"><div class="bar" data-width="43"></div></div>
+    </div>
+
+    <div class="impact-card">
+      <h3 class="counter" data-target="20">0</h3>
+      <p>Communities Reached</p>
+      <div class="progress"><div class="bar" data-width="21"></div></div>
+    </div>
+
+    <div class="impact-card">
+      <h3 class="counter" data-target="50">0</h3>
+      <p>Active Volunteers</p>
+      <div class="progress"><div class="bar" data-width="35"></div></div>
+    </div>
+
+  </div>
+
+</section>
+<style>
+  
+/* ================= PARALLAX SECTION ================= */
+.parallax-impact {
+  position: relative;
+  padding: 120px 8%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-image: url("impact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* DARK OVERLAY */
+.parallax-impact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
+}
+
+/* CONTENT */
+.impact-header,
+.impact-grid {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+/* HEADER */
+.impact-header {
+  max-width: 700px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.impact-header h2 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.impact-header p {
+  font-size: 18px;
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+/* GRID */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.impact-card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  padding: 35px;
+  color: #111;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.impact-card h3 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+/* PROGRESS BAR */
+.progress {
+  height: 8px;
+  background: #eee;
+  border-radius: 50px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff2d7a, #ff7aa8);
+  border-radius: 50px;
+  transition: width 2s ease;
+}
+
+/* ================= STICKY COUNTER ================= */
+.impact-sticky {
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px 25px;
+  border-radius: 50px;
+  margin-bottom: 40px;
+
+  color: #fff;
+}
+
+.impact-sticky div {
+  text-align: center;
+}
+
+.impact-sticky span {
+  font-size: 20px;
+  font-weight: 900;
+  display: block;
+}
+
+.impact-sticky small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-header h2 {
+    font-size: 34px;
+  }
+
+  .impact-sticky {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .parallax-impact {
+    background-attachment: scroll;
+  }
+}
+</style>
+<script>
+const section = document.querySelector("#impactSection");
+const counters = document.querySelectorAll(".counter");
+const bars = document.querySelectorAll(".bar");
+
+const sGirls = document.getElementById("sGirls");
+const sComm = document.getElementById("sComm");
+const sVol = document.getElementById("sVol");
+
+let started = false;
+
+/* OBSERVER */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !started) {
+      started = true;
+      startAnimation();
+    }
+  });
+}, { threshold: 0.3 });
+
+observer.observe(section);
+
+/* MAIN ANIMATION */
+function startAnimation() {
+
+  counters.forEach(counter => {
+    let target = +counter.getAttribute("data-target");
+    let count = 0;
+    let speed = target / 120;
+
+    function update() {
+      count += speed;
+
+      if (count < target) {
+        let value = Math.floor(count) + "+";
+        counter.innerText = value;
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target + "+";
+      }
+    }
+
+    update();
+  });
+
+  /* PROGRESS BARS */
+  bars.forEach(bar => {
+    let width = bar.getAttribute("data-width");
+    setTimeout(() => {
+      bar.style.width = width + "%";
+    }, 300);
+  });
+
+  /* STICKY LIVE COUNTER */
+  animateSticky(15000, sGirls);
+  animateSticky(20, sComm);
+  animateSticky(50, sVol);
+}
+
+/* STICKY COUNTER FUNCTION */
+function animateSticky(target, el) {
+  let count = 0;
+  let speed = target / 120;
+
+  function update() {
+    count += speed;
+
+    if (count < target) {
+      el.innerText = Math.floor(count) + "+";
+      requestAnimationFrame(update);
+    } else {
+      el.innerText = target + "+";
+    }
+  }
+
+  update();
+}
+</script>
+
+
+
+<!-- ================= CTA SECTION ================= -->
+<section class="cta-section">
+
+  <div class="cta-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="cta-text">
+
+      <span class="section-tag">Get Involved</span>
+
+      <h2>
+        Be part of the change<br>
+        in a girl’s life today
+      </h2>
+
+      <p>
+        Your support helps us provide education, mentorship,
+        health support, and dignity to girls across communities.
+      </p>
+
+      <!-- ACTION BUTTONS -->
+      <div class="cta-buttons">
+        <button onclick="openDonate()" class="btn primary">Donate Now</button>
+        <button onclick="openJoin()" class="btn secondary">Join Us</button>
+      </div>
+
+    </div>
+
+    <!-- RIGHT NEWSLETTER CARD -->
+    <div class="cta-card">
+
+      <h3>Stay Updated</h3>
+      <p>Join our newsletter and follow our impact stories.</p>
+
+      <input type="email" id="newsletterEmail" placeholder="Enter your email">
+
+      <button onclick="subscribe()" class="btn dark">Subscribe</button>
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+  
+/* ================= CTA SECTION ================= */
+.cta-section {
+  padding: 120px 8%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+/* CONTAINER */
+.cta-container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT TEXT */
+.cta-text {
+  text-align: left;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff2d7a;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta-text h2 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.cta-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* PRIMARY BUTTON */
+.btn {
+  padding: 14px 26px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.btn.primary {
+  background: #ff2d7a;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #e11d6a;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: #f4f4f4;
+  color: #111;
+}
+
+.btn.secondary:hover {
+  background: #e9e9e9;
+}
+
+.btn.dark {
+  background: #111;
+  color: #fff;
+  width: 100%;
+}
+
+/* RIGHT CARD (NEWSLETTER) */
+.cta-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.cta-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.cta-card p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cta-card input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cta-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cta-text h2 {
+    font-size: 34px;
+  }
+}
+</style>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section id="contact" class="contact-section">
+
+  <div class="contact-container">
+
+    <!-- FORM (LEFT) -->
+    <form class="contact-form">
+
+      <span class="section-tag">Send Message</span>
+
+      <h2>Get In Touch</h2>
+
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+
+      <textarea placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+    <!-- INFO (RIGHT) -->
+    <div class="contact-info">
+
+      <span class="section-tag">Contact Us</span>
+
+      <h2>Let’s Work Together</h2>
+
+      <p>
+        We are always open to partnerships, support, volunteering opportunities,
+        and community impact collaborations.
+      </p>
+
+      <div class="contact-details">
+        <p>📧 info@binticare.org</p>
+        <p>📞 +254 728 219 546/+254 791 658 086 </p>
+        <p>📍 Kitale-Milimani Estate-Kenya</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+  /* ================= CONTACT (PREMIUM VERSION) ================= */
+
+.contact-section {
+  padding: 120px 8%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #fff 60%, #ffe6f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft decorative glow */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: #ff2d7a;
+  opacity: 0.08;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* FORM LEFT, INFO RIGHT */
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= FORM ================= */
+.contact-form {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.section-tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff2d7a;
+  font-weight: bold;
+}
+
+/* inputs */
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff2d7a;
+  box-shadow: 0 0 0 3px rgba(255,45,122,0.1);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+/* button */
+.contact-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff2d7a, #ff5aa5);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,45,122,0.3);
+}
+
+/* ================= INFO ================= */
+.contact-info h2 {
+  font-size: 42px;
+  font-weight: 900;
+  margin: 10px 0 15px;
+  color: #111;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.contact-details {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-form {
+    order: 2;
+  }
+
+  .contact-info {
+    order: 1;
+  }
+}
+</style>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-box">
+      <h3>BintiCare Foundation</h3>
+      <p>
+        Empowering girls through education, dignity,
+        mentorship, and opportunity.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- SOCIAL LINKS -->
+    <div class="footer-box">
+      <h4>Follow Us</h4>
+
+      <div class="socials">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM LINE -->
+  <div class="footer-bottom">
+    <p>© 2026 BintiCare Foundation. All Rights Reserved.</p>
+    <p>Developed & Managed by <strong>Baba Nile Digital Africa</strong></p>
+  </div>
+
+</footer>
+<style>
+  
+/* ================= FOOTER ================= */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 80px 8% 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* BOX */
+.footer-box h3,
+.footer-box h4 {
+  margin-bottom: 15px;
+}
+
+.footer-box p {
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* LINKS */
+.footer-box a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #ff2d7a;
+}
+
+/* SOCIAL */
+.socials a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #bbb;
+}
+
+.socials a:hover {
+  color: #ff2d7a;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
+</style>
+</body>
+</html>
